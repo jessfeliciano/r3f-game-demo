@@ -75,7 +75,7 @@ export default function PlayerScript() {
     useEffect(() => {
         if (!path.length) return;
 
-        const [nextPosition] = path;
+        let [nextPosition] = path;
 
         (async () => {
             const anyAction =
@@ -87,9 +87,14 @@ export default function PlayerScript() {
 
             if (anyAction) {
                 // proceed with next step in path
-                setPath(current => current.slice(1));
+                setPath(current => current.slice(1)); // could be it right here
             }
         })();
+
+        // eslint-disable-next-line consistent-return
+        return () => {
+            [nextPosition] = path;
+        };
     }, [path, getComponent]);
 
     return (
