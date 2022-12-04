@@ -11,6 +11,7 @@ import Workstation from '../entities/Workstation';
 import PizzaPickup from '../entities/PizzaPickup';
 import Interactable from '../@core/Interactable';
 import ScenePortal from '../@core/ScenePortal';
+import Player from '../entities/Player';
 
 const mapData = mapDataString(`
 # # # # # # # # # # #
@@ -130,6 +131,7 @@ const InsideShopScene = () => {
                 <Interactable />
                 <ScenePortal name="exit" enterDirection={[-1, 0]} target="start" />
             </GameObject>
+            <Player x={6} y={0} />
         </>
     );
 };
