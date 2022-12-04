@@ -15,6 +15,7 @@ import Player from '../entities/Player';
 
 const mapData = mapDataString(`
 # # T # # # # # T # #
+# . . . . . . . . . #
 # . s . h . o . . . #
 # . S . H . O . . . #
 # D D D D D D D D D #
@@ -126,12 +127,12 @@ const InsideShopScene = () => {
                 <ambientLight />
                 <TileMap data={mapData} resolver={resolveMapTile} definesMapSize />
             </GameObject>
-            <GameObject x={10} y={15}>
+            <GameObject x={5} y={0}>
                 <Collider />
                 <Interactable />
-                <ScenePortal name="exit" enterDirection={[-1, 0]} target="start" />
+                <ScenePortal name="exit" enterDirection={[-1, 0]} target="outside" />
             </GameObject>
-            <Player x={5} y={0} />
+            <Player x={5} y={1} />
         </>
     );
 };

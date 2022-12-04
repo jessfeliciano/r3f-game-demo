@@ -6,8 +6,7 @@ import Scene from './@core/Scene';
 import SceneManager from './@core/SceneManager';
 import useWindowSize from './@core/useWindowSize';
 import InsideShopScene from './scenes/InsideShopScene';
-// import OfficeScene from './scenes/OfficeScene';
-// import OtherScene from './scenes/OtherScene';
+import OutsideShopScene from './scenes/OutsideShopScene';
 import soundData from './soundData';
 import spriteData from './spriteData';
 import globalStyles from './styles/global';
@@ -37,16 +36,13 @@ export default function App() {
             <div css={styles.root(width, height)}>
                 <Game cameraZoom={40}>
                     <AssetLoader urls={urls} placeholder="Loading assets ...">
-                        <SceneManager defaultScene="InsideShop">
-                            <Scene id="InsideShop">
+                        <SceneManager defaultScene="outside">
+                            <Scene id="inside">
                                 <InsideShopScene />
                             </Scene>
-                            {/* <Scene id="office">
-                                <OfficeScene />
+                            <Scene id="outside">
+                                <OutsideShopScene />
                             </Scene>
-                            <Scene id="other">
-                                <OtherScene />
-                            </Scene> */}
                         </SceneManager>
                     </AssetLoader>
                 </Game>
