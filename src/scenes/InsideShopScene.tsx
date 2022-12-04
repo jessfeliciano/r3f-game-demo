@@ -14,12 +14,12 @@ import ScenePortal from '../@core/ScenePortal';
 import Player from '../entities/Player';
 
 const mapData = mapDataString(`
-# # # # # # # # # # #
+# # T # # # # # T # #
+# . s . h . o . . . #
+# . S . H . O . . . #
+# D D D D D D D D D #
 # . . . . . . . . . #
-# . . . . . . . . . #
-# . . . . . . . . . #
-# . . . . . . . . . #
-# . . . . . . . . . #
+# . . . . . R . . . #
 # . . . . . . . . . #
 # # # # # . # # # # #
 `);
@@ -131,7 +131,7 @@ const InsideShopScene = () => {
                 <Interactable />
                 <ScenePortal name="exit" enterDirection={[-1, 0]} target="start" />
             </GameObject>
-            <Player x={6} y={0} />
+            <Player x={5} y={0} />
         </>
     );
 };
