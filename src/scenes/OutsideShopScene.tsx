@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react';
-import Plant from '../entities/Plant';
+import React from 'react';
+// import Plant from '../entities/Plant';
 import Collider from '../@core/Collider';
 import GameObject from '../@core/GameObject';
 import Sprite from '../@core/Sprite';
@@ -46,10 +46,10 @@ const resolveMapTile: TileMapResolver = (type, x, y) => {
             return floor;
         case 'F':
             return (
-                <Fragment key={key}>
-                    {floor}
-                    <Plant {...position} />
-                </Fragment>
+                <GameObject key={key} {...position} layer="wall">
+                    <Collider />
+                    <Sprite {...spriteData.shrub} state="shrub" />
+                </GameObject>
             );
         case 'R':
             return (

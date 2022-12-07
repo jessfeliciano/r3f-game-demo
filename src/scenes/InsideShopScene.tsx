@@ -6,7 +6,6 @@ import GameObject from '../@core/GameObject';
 import Collider from '../@core/Collider';
 import Sprite from '../@core/Sprite';
 import Plant from '../entities/Plant';
-import CoffeeMachine from '../entities/CoffeeMachine';
 import Workstation from '../entities/Workstation';
 import PizzaPickup from '../entities/PizzaPickup';
 import Interactable from '../@core/Interactable';
@@ -54,10 +53,10 @@ const resolveMapTile: TileMapResolver = (type, x, y) => {
             );
         case 'R':
             return (
-                <Fragment key={key}>
-                    {floor}
-                    <CoffeeMachine {...position} />
-                </Fragment>
+                <GameObject key={key} {...position} layer="wall">
+                    <Collider />
+                    <Sprite {...spriteData.register} state="register" />
+                </GameObject>
             );
         case 'D':
             return (
