@@ -30,6 +30,40 @@ const spriteData: { [index: string]: SpriteProps } = {
             ],
         },
     },
+    link: {
+        src: './assets/link.png',
+        frameWidth: 20,
+        frameHeight: 20,
+        frameTime: 300,
+        sheet: {
+            default: [[0, 2]],
+            walk: [
+                [1, 2],
+                [2, 2],
+            ],
+            action: [
+                [0, 1],
+                [2, 1],
+            ],
+        },
+    },
+    shrub: {
+        src: './assets/shrub.png',
+        frameWidth: 20,
+        frameHeight: 20,
+        frameTime: 300,
+        sheet: {
+            default: [[0, 2]],
+            walk: [
+                [1, 2],
+                [2, 2],
+            ],
+            action: [
+                [0, 1],
+                [2, 1],
+            ],
+        },
+    },
     objects: {
         src: './assets/objects.png',
         frameWidth: 20,
