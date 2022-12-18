@@ -19,7 +19,7 @@ G G P F T T T F P G T
 G G P F T P T F P G T
 P P P P P P P P P G T
 G G G G G G G G G G T
-# # # # # # # # # # T
+G G G G G G G G G G T
 `);
 
 const resolveMapTile: TileMapResolver = (type, x, y) => {
